@@ -1,8 +1,11 @@
+import itertools
 import pandas as pd
+import numpy as np
+from imblearn.over_sampling import SMOTE
+from sklearn.metrics import accuracy_score
 import streamlit as st
 import time
 import pickle
-from sklearn.metrics.pairwise import manhattan_distances
 
 
 model = pickle.load(open('knn_smote_normal_tuning_model.pkl', 'rb'))
